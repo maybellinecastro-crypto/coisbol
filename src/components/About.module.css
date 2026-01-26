@@ -13,7 +13,24 @@
 
 .about p {
   font-size: 1.2rem;
-  max-width: 800px;
   margin: 0 auto;
   color: var(--gris-oscuro);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--verde-institucional);
+}
+
+.text {
+  text-align: right;
 }
