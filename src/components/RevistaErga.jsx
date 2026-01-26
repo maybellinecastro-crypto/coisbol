@@ -16,7 +16,6 @@ const RevistaErga = () => {
           </p>
           <div className={styles.buttonContainer}>
             <a href="https://revistas.uninunez.edu.co/index.php/ergaomnes" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>Conoce la Revista</a>
-            <a href="https://docs.google.com/spreadsheets/d/1PON6uYKHdXg5CHfW4yqTci52lGU_wMEn/edit?usp=sharing&ouid=101736866585881826322&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>Conoce los Artículos</a>
           </div>
         </div>
         <div className={styles.imageContainer}>
