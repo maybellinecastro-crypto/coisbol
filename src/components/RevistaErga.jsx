@@ -7,7 +7,7 @@ const RevistaErga = () => {
     <section id="revista-erga" className={styles.revistaErga}>
       <div className={styles.contentWrapper}>
         <div className={styles.textContainer}>
-          <h2>Revista Académica ERG@</h2>
+          <h2>Revista Académica ERG@onmes</h2>
           <p>
             ERG@ es nuestra publicación semestral que ofrece análisis profundos, investigaciones y debates sobre seguridad, violencia, derechos humanos y justicia en el departamento de Bolívar. Un espacio para la reflexión académica y la construcción de conocimiento.
           </p>
