@@ -9,7 +9,7 @@ const RevistaErga = () => {
         <div className={styles.textContainer}>
           <h2>Revista Académica ERG@onmes</h2>
           <p>
-            ERG@ es nuestra publicación semestral que ofrece análisis profundos, investigaciones y debates sobre seguridad, violencia, derechos humanos y justicia en el departamento de Bolívar. Un espacio para la reflexión académica y la construcción de conocimiento.
+            ERG@onmes es nuestra publicación semestral que ofrece análisis profundos, investigaciones y debates sobre seguridad, violencia, derechos humanos y justicia en el departamento de Bolívar. Un espacio para la reflexión académica y la construcción de conocimiento.
           </p>
           <p>
             Para consultar los artículos completos y profundizar en los hallazgos, le invitamos a ingresar a la revista.
