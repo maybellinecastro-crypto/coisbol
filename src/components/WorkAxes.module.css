@@ -1,0 +1,40 @@
+.workAxes {
+  padding: 4rem 2rem;
+  background-color: var(--gris-claro);
+  text-align: center;
+}
+
+.workAxes h2 {
+  font-family: var(--font-secundaria);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--verde-institucional);
+}
+
+.axesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.axisCard {
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.axisCard h3 {
+  font-family: var(--font-secundaria);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--verde-institucional);
+}
+
+.axisCard p {
+  font-size: 1rem;
+  line-height: 1.5;
+}

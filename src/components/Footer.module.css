@@ -1,0 +1,42 @@
+.footer {
+  background-color: #333;
+  color: var(--blanco);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.logoContainer {
+  flex: 1;
+}
+
+.textContainer {
+  flex: 2;
+}
+
+.logo {
+  height: 60px; 
+  width: auto;
+}
+
+.footer p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    margin-bottom: 1rem;
+  }
+
+  .textContainer {
+    margin-bottom: 1rem;
+    order: -1; 
+  }
+}

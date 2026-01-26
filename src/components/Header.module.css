@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav a {
+  font-family: var(--font-principal);
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--texto-principal);
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--verde-institucional);
+}

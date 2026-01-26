@@ -1,0 +1,78 @@
+.revistaErga {
+  padding: 4rem 2rem;
+  background-color: var(--blanco);
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.textContainer {
+  flex: 1;
+  text-align: left;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revistaErga h2 {
+  font-family: var(--font-secundaria);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--verde-institucional);
+}
+
+.revistaErga p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--verde-institucional);
+  color: var(--blanco);
+  font-family: var(--font-secundaria);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #003329;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+  .textContainer {
+    text-align: center;
+  }
+  .buttonContainer {
+    justify-content: center;
+  }
+}
