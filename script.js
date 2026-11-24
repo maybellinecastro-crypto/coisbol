@@ -31,3 +31,21 @@ const mapViews={
 };
 const mapFrame=document.querySelector('#interactive-map'),mapTitle=document.querySelector('#map-title'),mapDescription=document.querySelector('#map-description'),mapKicker=document.querySelector('#map-kicker');
 document.querySelectorAll('.map-tabs button').forEach(button=>button.addEventListener('click',()=>{const view=mapViews[button.dataset.map];document.querySelectorAll('.map-tabs button').forEach(item=>{item.classList.remove('active');item.setAttribute('aria-selected','false')});button.classList.add('active');button.setAttribute('aria-selected','true');mapKicker.textContent=view.kicker;mapTitle.textContent=view.title;mapDescription.textContent=view.description;mapFrame.title=view.frameTitle;mapFrame.src=view.src}));
+
+const carousel=document.querySelector('.carousel-card');
+if(carousel){
+  const slides=[...carousel.querySelectorAll('.carousel-slide')],dots=[...carousel.querySelectorAll('.carousel-dots button')],previous=carousel.querySelector('.prev'),next=carousel.querySelector('.next');
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current=0,timer;
+  const showSlide=index=>{current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>{const active=i===current;slide.classList.toggle('active',active);slide.setAttribute('aria-hidden',String(!active));dots[i].classList.toggle('active',active);dots[i].setAttribute('aria-selected',String(active))})};
+  const stop=()=>clearInterval(timer);
+  const start=()=>{stop();if(!reduceMotion)timer=setInterval(()=>showSlide(current+1),5500)};
+  previous.addEventListener('click',()=>{showSlide(current-1);start()});
+  next.addEventListener('click',()=>{showSlide(current+1);start()});
+  dots.forEach((dot,index)=>dot.addEventListener('click',()=>{showSlide(index);start()}));
+  carousel.addEventListener('pointerenter',stop);
+  carousel.addEventListener('pointerleave',start);
+  carousel.addEventListener('focusin',stop);
+  carousel.addEventListener('focusout',start);
+  start();
+}
