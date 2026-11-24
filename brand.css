@@ -1,0 +1,23 @@
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: 164px;
+  height: auto;
+}
+
+.footer-brand > img {
+  display: block;
+  width: 172px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 720px) {
+  .brand img {
+    width: 142px;
+  }
+}
