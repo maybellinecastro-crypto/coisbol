@@ -8,6 +8,7 @@ Portal informativo y dashboard del Centro de Observación e Investigación Socia
 - Panel de alertas y municipios priorizados.
 - Información institucional y ejes de trabajo.
 - Diez investigaciones aplicadas sobre protección, violencias, justicia y derechos humanos.
+- Tres mapas interactivos con ZODES, violencia intrafamiliar y concentración municipal.
 - Filtros interactivos y diseño responsive.
 
 ## Desarrollo local

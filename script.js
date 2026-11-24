@@ -23,3 +23,11 @@ function renderProjects(filter='all'){
 }
 renderProjects();
 document.querySelectorAll('.research-toolbar button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.research-toolbar button').forEach(item=>item.classList.remove('active'));button.classList.add('active');renderProjects(button.dataset.filter)}));
+
+const mapViews={
+  zodes:{src:'/maps/zodes-bolivar.html',kicker:'Organización territorial',title:'Zonas de Desarrollo Económico y Social',description:'Consulta la composición territorial del departamento y reconoce los municipios que integran cada ZODES.',frameTitle:'Mapa interactivo de las ZODES de Bolívar'},
+  violencia:{src:'/maps/violencia-zodes.html',kicker:'Análisis por subregión',title:'Violencia intrafamiliar acumulada por ZODES',description:'Compara la acumulación de registros entre ZODES mediante una escala secuencial verde de menor a mayor concentración.',frameTitle:'Mapa interactivo de violencia intrafamiliar por ZODES'},
+  calor:{src:'/maps/calor-violencia.html',kicker:'Concentración municipal',title:'Mapa de calor de violencia intrafamiliar',description:'Identifica los municipios con mayor concentración relativa de casos y explora el detalle territorial con el cursor.',frameTitle:'Mapa de calor interactivo de violencia intrafamiliar por municipio'}
+};
+const mapFrame=document.querySelector('#interactive-map'),mapTitle=document.querySelector('#map-title'),mapDescription=document.querySelector('#map-description'),mapKicker=document.querySelector('#map-kicker');
+document.querySelectorAll('.map-tabs button').forEach(button=>button.addEventListener('click',()=>{const view=mapViews[button.dataset.map];document.querySelectorAll('.map-tabs button').forEach(item=>{item.classList.remove('active');item.setAttribute('aria-selected','false')});button.classList.add('active');button.setAttribute('aria-selected','true');mapKicker.textContent=view.kicker;mapTitle.textContent=view.title;mapDescription.textContent=view.description;mapFrame.title=view.frameTitle;mapFrame.src=view.src}));
